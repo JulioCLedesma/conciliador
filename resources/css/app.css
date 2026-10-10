@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+.reconciliation-board {
+    padding-bottom: calc(var(--actions-height, 140px) + 3rem);
+}
+
+.reconciliation-panel {
+    display: flex;
+    flex-direction: column;
+    height: max(420px, calc(100dvh - var(--actions-height, 140px) - 2rem));
+}
+
+.reconciliation-controls {
+    flex-shrink: 1;
+    min-height: 0;
+    max-height: 52%;
+    overflow-y: auto;
+}
+
+.reconciliation-rows {
+    flex: 1 1 0%;
+    min-height: 64px;
+    scrollbar-gutter: stable;
+    overflow-anchor: none;
+}
+
+.reconciliation-footer {
+    flex-shrink: 0;
+}
